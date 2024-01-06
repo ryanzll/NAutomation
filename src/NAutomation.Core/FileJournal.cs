@@ -3,7 +3,7 @@ using System.IO;
 
 namespace NAutomation.Core
 {
-    internal class FileRecorder
+    internal class FileJournal: IJournal
     {
         private StreamWriter m_sw;
 
@@ -12,9 +12,14 @@ namespace NAutomation.Core
             m_sw = new StreamWriter(filePath);
         }
 
+        public void Write(string text)
+        {
+            m_sw.Write(text);     
+        }
+
         public void WriteLine(string text)
         {
-            m_sw.WriteLine(text);     
+            m_sw.WriteLine(text);
         }
 
         public void Close()

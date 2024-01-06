@@ -9,6 +9,7 @@
     <Grid>
         <StackPanel>
             <Button Name="clickMeBtn" Width="60" Height="30" Click="Button_Click">Click Me</Button>
+            <TextBox x:Name="inputTextBox" Width="90" Height="30"></TextBox>
         </StackPanel>
     </Grid>
 </Window>
